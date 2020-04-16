@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  placeholder:
+    image: matthis974/dockspace:placeholder-1.0
+    build: .

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placeholder-herobot
+spec:
+  selector:
+    matchLabels:
+      app: placeholder-herobot
+  template:
+    metadata:
+      labels:
+        app: placeholder-herobot
+    spec:
+      containers:
+      - name: placeholder-herobot
+        image: matthis974/dockspace:placeholder-1.0
+        env:
+          - name:  TOKEN
+            valueFrom:
+              secretKeyRef:
+                name:  placeholder-herobot-secret
+                key:  TOKEN
+        resources:
+          limits:
+            memory: "15Mi"
+            cpu: "50m"
+      imagePullSecrets:
+        - name: regcred

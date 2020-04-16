@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": false,
+        "outDir": "./dist"
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

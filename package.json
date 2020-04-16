@@ -1,0 +1,18 @@
+{
+  "name": "discord-simple-idler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HeroBot-discord/discord-simple-idler",
+  "author": "Matthieu P <matthieu.p@unix-corp.tech>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node-fetch": "^2.5.6",
+    "herobot-socket-handler": "github:MatthieuCoder/discord-socket-client",
+    "node-fetch": "^2.6.0"
+  },
+  "scripts": {
+    "build": "tsc -p . || true",
+    "dc:up": "yarn build && docker-compose build && docker-compose up",
+    "dc:build": "yarn build && docker-compose build"
+  }
+}
